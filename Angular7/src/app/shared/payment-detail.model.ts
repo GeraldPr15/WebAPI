@@ -1,4 +1,4 @@
-export class PaymentDetail {
+export class SistemaDePago {
     Pago_ID: number;
     Nombre_Tarjeta: string;
     Numero_Tajerta: string;

@@ -28,6 +28,8 @@ namespace WebAPI.Controllers
             return _context.SistemaDePago;
         }
 
+
+
         // PUT: api/SistemaDePago/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutSistemaDePago([FromRoute] int id, [FromBody] SistemaDePago sistemaDePago)
@@ -61,6 +63,20 @@ namespace WebAPI.Controllers
             }
 
             return NoContent();
+        }
+
+        // POST: api/SistemaDePago/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<SistemaDePago>> GetSistemaDePago(int id)
+        {
+            var sistemaDePago = await _context.SistemaDePago.FindAsync(id);
+
+            if (sistemaDePago == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(sistemaDePago);
         }
 
         // POST: api/SistemaDePago

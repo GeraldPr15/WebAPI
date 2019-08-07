@@ -1,7 +1,7 @@
-import { PaymentDetail } from './payment-detail.model';
+import { SistemaDePago } from './payment-detail.model';
 
-describe('PaymentDetail', () => {
+describe('SistemaDePago', () => {
   it('should create an instance', () => {
-    expect(new PaymentDetail()).toBeTruthy();
+    expect(new SistemaDePago()).toBeTruthy();
   });
 });

@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29123.88
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csproj", "{1C9F3134-CB15-447D-B1C0-DD4179D2AFE9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "WebAPI\WebAPI.csproj", "{1C9F3134-CB15-447D-B1C0-DD4179D2AFE9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{40B8D2E4-F946-4569-830B-CB663D1C435C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Model", "Model\Model.csproj", "{40B8D2E4-F946-4569-830B-CB663D1C435C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{DC889997-240E-4FFB-97BC-2ACA4CD0A19C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service", "Service\Service.csproj", "{DC889997-240E-4FFB-97BC-2ACA4CD0A19C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "Persistence\Persistence.csproj", "{48372A2E-7405-409E-AC3D-C3119AE958A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistence", "Persistence\Persistence.csproj", "{48372A2E-7405-409E-AC3D-C3119AE958A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI.UnitTest", "WebAPI.UnitTest\WebAPI.UnitTest.csproj", "{E216002F-09C9-4413-96D3-27AAFF81B77E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{48372A2E-7405-409E-AC3D-C3119AE958A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48372A2E-7405-409E-AC3D-C3119AE958A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48372A2E-7405-409E-AC3D-C3119AE958A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E216002F-09C9-4413-96D3-27AAFF81B77E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E216002F-09C9-4413-96D3-27AAFF81B77E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E216002F-09C9-4413-96D3-27AAFF81B77E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E216002F-09C9-4413-96D3-27AAFF81B77E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

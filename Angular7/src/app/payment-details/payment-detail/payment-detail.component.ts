@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PaymentDetailService } from 'src/app/shared/payment-detail.service';
 import { NgForm } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-payment-detail',
@@ -9,7 +10,8 @@ import { NgForm } from '@angular/forms';
 })
 export class PaymentDetailComponent implements OnInit {
 
-  constructor(private service: PaymentDetailService) { }
+  constructor(private service: PaymentDetailService, 
+    private toastr: ToastrService) { }
 
   ngOnInit() {
     this.resetForm();
@@ -27,10 +29,32 @@ export class PaymentDetailComponent implements OnInit {
     }
   }
 
-  onSubmit(form:NgForm){
-    this.service.PostSistemaDePago(form.value).subscribe(
-      res => {this.resetForm(form)},
-      err => {console.log(err);}
+  onSubmit(form: NgForm) {
+    if (this.service.formData.Pago_ID == 0)
+      this.insertRecord(form);
+    else
+      this.updateRecord(form);
+  }
+
+  insertRecord(form: NgForm) {
+    this.service.PostSistemaDePago().subscribe(
+      res => {
+        this.resetForm(form);
+        this.toastr.success('Enviado satisfactoriamente', 'Registro de detalles de pago');
+        this.service.refreshList();
+      },
+      err => { console.log(err); }
+    )
+  }
+
+  updateRecord(form: NgForm) {
+    this.service.PutSistemaDePago().subscribe(
+      res => {
+        this.resetForm(form);
+        this.toastr.info('Enviado satisfactoriamente', 'Registro de detalles de pago');
+        this.service.refreshList();
+      },
+      err => { console.log(err); }
     )
   }
 }
