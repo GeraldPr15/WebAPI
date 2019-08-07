@@ -13,10 +13,10 @@ namespace Persistence.Migrations
                 {
                     Pago_ID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Nombre_Tarjeta = table.Column<string>(nullable: true),
-                    Numero_Tajerta = table.Column<string>(nullable: true),
-                    Dia_Expiracion = table.Column<string>(nullable: true),
-                    CVV = table.Column<string>(nullable: true)
+                    Nombre_Tarjeta = table.Column<string>(type: "nvarchar(100)", nullable: false),
+                    Numero_Tajerta = table.Column<string>(type: "varchar(16)", nullable: false),
+                    Dia_Expiracion = table.Column<string>(type: "varchar(5)", nullable: false),
+                    CVV = table.Column<string>(type: "varchar(3)", nullable: false)
                 },
                 constraints: table =>
                 {

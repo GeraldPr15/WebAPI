@@ -24,13 +24,21 @@ namespace Persistence.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("CVV");
+                    b.Property<string>("CVV")
+                        .IsRequired()
+                        .HasColumnType("varchar(3)");
 
-                    b.Property<string>("Dia_Expiracion");
+                    b.Property<string>("Dia_Expiracion")
+                        .IsRequired()
+                        .HasColumnType("varchar(5)");
 
-                    b.Property<string>("Nombre_Tarjeta");
+                    b.Property<string>("Nombre_Tarjeta")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)");
 
-                    b.Property<string>("Numero_Tajerta");
+                    b.Property<string>("Numero_Tajerta")
+                        .IsRequired()
+                        .HasColumnType("varchar(16)");
 
                     b.HasKey("Pago_ID");
 
